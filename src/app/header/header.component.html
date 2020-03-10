@@ -1,0 +1,27 @@
+<nav class="navbar navbar-expand-sm navbar-dark bg-dark mb-3">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a href="#" class="navbar-brand">Recipe Book</a>
+        </div>
+
+        <div class="collapse navbar-collapse">
+            <ul class="navbar-nav">
+                <li>
+                    <a class="nav-link" href="#" (click)="onSelect('recipe')">Recipes</a>
+                </li>
+                <li>
+                    <a class="nav-link" href="#" (click)="onSelect('shopping-list')">Shopping List</a>
+                </li>
+            </ul>
+            <ul class="nav navbar-nav ml-auto">
+                <li class="dropdown" appDropdown #r="appDropdown" >
+                    <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">Manage</a>
+                    <div class="dropdown-menu" [ngClass]="{'show':r.isOpen}">
+                        <a href="#" class="dropdown-item">Save Data</a>
+                        <a href="#" class="dropdown-item">Fetch Data</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
